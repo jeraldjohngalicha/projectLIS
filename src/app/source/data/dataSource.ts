@@ -5,8 +5,16 @@ export interface BillItems {
     author: string;
 }
 
+export interface floorActivityItems {
+    statusDate: string;
+    parliamentaryStatus: string;
+    senators: string;
+    remarks: string;
+}
+
 export class DataSource{
-    billSearchResult : BillItems[] = billSearchResult;y
+    billSearchResult : BillItems[] = billSearchResult;
+    floorActivity : floorActivityItems[] = floorActivity;
 }
 
 const billSearchResult: BillItems[] = [
@@ -36,4 +44,12 @@ const billSearchResult: BillItems[] = [
     {bill: 'SBN-2123', shortTitle: 'AUTOMATIC REVERSAL OF THE EXCISE TAX ON FUEL UNDER R.A NO.10963 (TRAIN LAW)', dateFiled: "2018-11-19", author: 'VILLANUEVA, JOEL'},
     {bill: 'SBN-2124', shortTitle: 'AUTOMATIC REVERSAL OF THE EXCISE TAX ON FUEL UNDER R.A NO.10963 (TRAIN LAW)', dateFiled: "2018-11-19", author: 'VILLANUEVA, JOEL'},
     {bill: 'SBN-2125', shortTitle: 'AUTOMATIC REVERSAL OF THE EXCISE(2) TAX ON FUEL UNDER R.A NO.10963 (TRAIN LAW)', dateFiled: "2018-11-19", author: 'VILLANUEVA, JOEL'}
+];
+
+const floorActivity: floorActivityItems[] = [
+    {statusDate: "09/20/2017", parliamentaryStatus: 'Sponsorship Speech', senators: 'ANGARA, JUAN EDGARDO "SONNY" M.', remarks: 'Sample Remarks'},
+    {statusDate: "09/27/2017", parliamentaryStatus: 'Interpellation', senators: 'VILLANUEVA, JOEL', remarks: 'Sample Remarks'},
+    {statusDate: "10/04/2017", parliamentaryStatus: 'Sponsorship Speech', senators: 'SOTTO III, VICENTE C.', remarks: 'Sample Remarks'},
+    {statusDate: "11/25/2017", parliamentaryStatus: 'Interpellation', senators: 'AQUINO IV, PAOLO BENIGNO "BAM"  RECTO, RALPH G.  GATCHALIAN, SHERWIN T.', remarks: 'Sample Remarks'},
+    {statusDate: "01/09/2018", parliamentaryStatus: 'Sponsorship Speech', senators: 'DRILON, FRANKLIN M.  LACSON, PANFILO M.  HONTIVEROS, RISA  PANGILINAN, FRANCIS N.  RECTO, RALPH G.  GATCHALIAN, SHERWIN T.  PACQUIAO, EMMANUEL "MANNY" D.  PIMENTEL, AQUILINO KOKO III L.', remarks: 'Sample Remarks'}
 ];
