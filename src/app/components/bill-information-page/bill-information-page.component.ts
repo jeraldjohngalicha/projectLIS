@@ -11,21 +11,12 @@ export class BillInformationPageComponent implements OnInit {
 
   constructor( private activeRoute: ActivatedRoute ) { }
   
-  // billNo: string = '';
-  // billItems: BillItems[];
-  // dataSource: DataSource  = new DataSource();
-
   dataSource: DataSource  = new DataSource();
   billItem: BillItems;
 
   ngOnInit() {
 
     this.activeRoute.params.subscribe(param=>{ 
-        // this.billNo = param['id'];
-        // this.billItems =  this.dataSource.billSearchResult.filter(bill => bill.bill === this.billNo);
-        // console.log("Filtered data: ");
-        // console.log(this.billItems);
-
         let billNo: string = param['id'];
         let billItems: BillItems[] = this.dataSource.billSearchResult.filter(bill => bill.bill === billNo);
         console.log("Filtered data: ");

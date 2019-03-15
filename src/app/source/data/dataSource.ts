@@ -201,7 +201,7 @@ const billSearchResult: BillItems[] = [
             sessionType: "THIRD REGULAR SESSION",
             scope: "NATIONAL",
             author: "VILLANUEVA, JOEL",
-            coAuthors: [],
+            coAuthors: null,
             longTitle : 'AN ACT PROVIDING FOR THE AUTOMATIC REVERSAL OF THE EXCISE TAX ON FUEL UNDER REPUBLIC ACT NO. 10963 OTHERWISE KNOWN AS THE ‘TAX REFORM FOR ACCELERATION AND INCLUSION (TRAIN)’ AMENDING FOR THE PURPOSE, THE NATIONAL INTERNAL REVENUE CODE (NIRC) OF 1997, AS AMENDED',
             committeeReportNo : {
                 primaryCommittee: "WAYS AND MEANS",
