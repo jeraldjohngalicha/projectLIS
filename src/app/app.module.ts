@@ -32,8 +32,10 @@ import { SearchPageMidRightComponent } from './components/search-page-mid-right/
 import { SearchPageBottomComponent } from './components/search-page-bottom/search-page-bottom.component';
 import { AddNewComponent } from './components/add-new/add-new.component'
 import { LisPickListComponent } from './components/lis-pick-list/lis-pick-list.component';
-import { PickListDialogComponent } from './components/pick-list-dialog/pick-list-dialog.component'
-import { AddNewComponentForm } from './components/add-new-form/add-new-form.component'
+import { PickListDialogComponent } from './components/pick-list-dialog/pick-list-dialog.component';
+import { AddNewComponentForm } from './components/add-new-form/add-new-form.component';
+import { LoginComponent } from './components/login/login.component';
+import { AddEditVotesComponent } from './components/add-edit-votes/add-edit-votes.component';
 
 const appRoutes: Routes = [
   { path: 'search', component: SearchPageComponent },
@@ -50,6 +52,10 @@ const appRoutes: Routes = [
   {
     path: 'add-new',
     component: AddNewComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
 ];
 
@@ -61,7 +67,7 @@ const appRoutes: Routes = [
     BillInformationPageComponent,
     AppHeaderComponent, SidenavListComponent, SearchPageTopComponent, SearchPageMidComponent, AddNewComponent,
     LisPickListComponent, PickListDialogComponent, SearchPageMidLeftComponent, SearchPageMidRightComponent, SearchPageBottomComponent,
-    AddNewComponentForm
+    AddNewComponentForm, LoginComponent, AddEditVotesComponent
   ],
   imports: [
     RouterModule.forRoot(
