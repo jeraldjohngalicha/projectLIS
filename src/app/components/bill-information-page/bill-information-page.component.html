@@ -57,7 +57,12 @@
                   </tr>
               </tbody>
             </table>
-            <p *ngIf="!billItem.billInfo.coAuthors">No available content.</p>
+            <table class="cell-padding" *ngIf="!billItem.billInfo.coAuthors">
+                <tr>
+                    <td class="label-bill-info">Co-Author(s)</td>
+                    <td>No available content.</td>
+                </tr>
+            </table>
           </div>
         </div>
         <div class="row" style="width:100%">
@@ -164,12 +169,12 @@
       </div>
     </mat-tab>
 
-
-
     <mat-tab label="House Counter Part">
         <div style="padding:35px;">
             <div class="row" style="width:100%">
-                <p>No available content.</p>
+                <div class="col-sm-12">
+                  <p>No available content.</p>
+                </div>
             </div>
         </div>
     </mat-tab>
@@ -197,119 +202,6 @@
           </div>
           <p *ngIf="!billItem.billInfo.floorActivity">No available content.</p>
     </mat-tab>
-    <!-- <mat-tab label="Votes">
-      <div style="padding:35px;">
-        <div class="row" style="width:100%">
-          <div class="col-sm-10">
-            <table class="cell-padding-votes">
-              <tr>
-                <td class="label-bill-info">Date of Vote</td>
-                <td>11/28/2017</td>
-              </tr>
-              <tr>
-                <td class="label-bill-info">Type of Vote</td>
-                <td>THIRD READING</td>
-              </tr>
-              <tr>
-                <td class="label-bill-info">Yes</td>
-                <td class="label-bill-info">No</td>
-                <td class="label-bill-info">Abstain</td>
-              </tr>
-
-              <tr>
-                <td>ANGARA, JUAN EDGARDO "SONNY" M.</td>
-                <td>HONTIVEROS, RISA</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>BINAY, MARIA LOURDES NANCY S.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>DRILON, FRANKLIN M.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>EJERCITO, JOSEPH VICTOR G.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>ESCUDERO, FRANCIS "CHIZ" G.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>GATCHALIAN, SHERWIN T.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>GORDON, RICHARD J.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>HONASAN II, GREGORIO B.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>LEGARDA, LOREN B.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>PACQUIAO, EMMANUEL "MANNY" D.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>PIMENTEL, AQUILINO KOKO III L.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>POE, GRACE L.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>RECTO, RALPH G.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>SOTTO III, VICENTE C.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>VILLANUEVA, JOEL</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>VILLAR, CYNTHIA A.</td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>ZUBIRI, JUAN MIGUEL F.</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </table>
-          </div>
-          <div class="col-sm-2"></div>
-        </div>
-      </div>
-    </mat-tab> -->
-
-
-
 
     <mat-tab label="Votes">
         <div style="padding:35px;">
@@ -325,7 +217,6 @@
                   <td>{{ billItem.billInfo.vote.typeOfVote }}</td>
                 </tr>
               </table>
-
               <table class="md-table">
                   <thead>
                       <tr>
@@ -342,18 +233,12 @@
                       </tr>
                   </tbody>
               </table>
-
             </div>
             <p *ngIf="!billItem.billInfo.vote">No available content.</p>
             <div class="col-sm-2"></div>
           </div>
         </div>
       </mat-tab>
-    
-
-
-
-
 
     <mat-tab label="Bill Transmittal">
       <div style="padding:35px;">
@@ -407,7 +292,6 @@
       </div>
     </mat-tab>
 
-
     <mat-tab label="Attachments">
       <div style="padding:35px;">
         <div class="row" style="width:100%">
@@ -422,22 +306,11 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <!-- <tr>
-                    <td style="flex: 0 1 20%;"><mat-icon>save_alt</mat-icon></td>
-                    <td style="flex: 0 1 40%;">ra 10963.pdf</td>
-                    <td style="flex: 0 1 40%;">REPUBLIC ACT NO. 10963</td>
-                  </tr>
-                  <tr>
-                    <td style="flex: 0 1 20%;"><mat-icon>save_alt</mat-icon></td>
-                    <td style="flex: 0 1 40%;">sbn-1592.pdf</td>
-                    <td style="flex: 0 1 40%;">SBN-1592 ([PER CTTE. RPT. NO. 164)</td>
-                  </tr> -->
                   <tr *ngFor="let attachment of billItem.billInfo.attachments">
                     <td style="flex: 0 1 20%;"><mat-icon>save_alt</mat-icon></td>
                     <td style="flex: 0 1 40%;">{{ attachment.filename }}</td>
                     <td style="flex: 0 1 40%;">{{ attachment.documentDescription }}</td>
                   </tr>
-                    
                 </tbody>
               </table>
               <p *ngIf="!billItem.billInfo.attachments">No available content.</p>
@@ -447,7 +320,5 @@
         </div>
       </div>
     </mat-tab>
-
-
   </mat-tab-group>
 </div>
